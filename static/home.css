@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+span {
+    font-family: 'Oswald', sans-serif;
+}
+/* header */
+.header_container {
+    text-align: center;
+}
+.title_box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.title_text {
+    font-size: 40px;
+    font-weight: bold;
+}
+.divide_line {
+    border: solid 2px;
+    color: black;
+}
+
