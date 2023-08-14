@@ -1,8 +1,26 @@
+:root {
+    --theme_colour: rgb(255, 255, 255);
+    --shadow_colour: orange;
+}
 body {
     margin: 0;
+    background-color: rgb(0, 0, 0, 0.85);
 }
+/* font */
 span {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Lobster', cursive;
     font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.center {
+    display: flex;
+    align-items: center;
+}
+.vertical_center {
+    display: flex;
+    align-items: center;
 }
 /* header */
 .header_container {
@@ -13,11 +31,71 @@ span {
     margin-bottom: 15px;
 }
 .title_text {
+    font-family: 'Lobster', cursive;
     font-size: 40px;
     font-weight: bold;
+    text-shadow: 2px 2px 10px var(--shadow_colour);
 }
-.divide_line {
-    border: solid 2px;
-    color: black;
+.header_line {
+    border: 2px solid var(--theme_colour);
+    box-shadow: 3px 3px 10px var(--shadow_colour);
 }
 
+
+/* weather */
+.wttrinfo_container {
+    text-align: center;
+    margin-top: 50px;
+}
+.wttrinfo_box {
+    display: flex;
+}
+
+
+/* weather box left */
+.wttrinfo_box_left {
+    margin-right: 30px;
+    display: flex;
+}
+.wttrinfo_icon {
+    width: 90px;
+    height: 90px;
+}
+.wttrinfo_rep_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.wttrinfo_forecast_txt {
+    font-size: 18px;
+}
+#wttrinfo_rep_txt {
+    margin-top: 25px;
+    font-size: 25px;
+}
+#wttrinfo_sup_txt {
+    font-size: 15px;
+}
+/* weather box bottom */
+.wttrinfo_box_right {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+/* temperature icon */
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48
+}
+#temp_icon {
+    margin-right: 5px;
+    color: red;
+}
+#feel-like_icon {
+    margin-right: 5px;
+    color: yellow;
+}

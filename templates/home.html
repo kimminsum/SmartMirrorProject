@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
-    <!-- font load -->
+    <!-- title font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- main page font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+    <!-- temperature icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- feel-like icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>SmartMirror Project</title>
 </head>
 <body>
@@ -16,7 +25,40 @@
         <div class="title_box">
             <span class="title_text">Smart Mirror Project</span>
         </div>
-        <div class="divide_line"></div>
+        <div class="header_line"></div>
+    </div>
+    <!-- body -->
+    <div>
+        <div class="wttrinfo_container">
+            <!-- wttrinfo-->
+            <div style="display: inline-block;">
+                <div class="wttrinfo_box">
+                    <!-- wttrinfo left -->
+                    <div class="wttrinfo_box_left">
+                        <div>
+                            <img class="wttrinfo_icon" src="https://openweathermap.org/img/wn/{{forecast_icon}}.png" alt="">
+                        </div>
+                        <div class="wttrinfo_rep_info">
+                            <span class="wttrinfo_forecast_txt" id="wttrinfo_rep_txt">{{forecast}}</span>    
+                            <span class="wttrinfo_forecast_txt" id="wttrinfo_sup_txt">{{temperature["temp_min"]}} ~ {{temperature["temp_max"]}} °C</span>
+                        </div>
+                    </div>
+                    <!-- wttrinfo right -->
+                    <div class="center" style="margin-top: 17px;">
+                        <div class="wttrinfo_box_right">
+                            <div class="vertical_center" style="margin-bottom: 3px;">
+                                <span class="material-symbols-outlined" id="temp_icon">device_thermostat</span>
+                                <span class="wttrinfo_forecast_txt">{{temperature["temp"]}} °C</span>    
+                            </div>
+                            <div class="vertical_center">
+                                <span class="material-symbols-outlined" id="feel-like_icon">sentiment_satisfied</span>
+                                <span class="wttrinfo_forecast_txt">{{temperature["feels_like"]}} °C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
