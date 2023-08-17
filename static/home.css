@@ -32,7 +32,7 @@ span {
 }
 .title_text {
     font-family: 'Lobster', cursive;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     text-shadow: 2px 2px 10px var(--shadow_colour);
 }
@@ -44,17 +44,22 @@ span {
 
 /* weather */
 .wttrinfo_container {
+    margin-top: 30px;
     text-align: center;
-    margin-top: 50px;
 }
 .wttrinfo_box {
     display: flex;
 }
-
-
+/* clock */
+.clock_container {
+    text-align: center;
+}
+.clock_txt {
+    font-size: 40px;
+}
 /* weather box left */
 .wttrinfo_box_left {
-    margin-right: 30px;
+    margin-right: 15px;
     display: flex;
 }
 .wttrinfo_icon {
@@ -76,9 +81,18 @@ span {
 #wttrinfo_sup_txt {
     font-size: 15px;
 }
-/* weather box bottom */
+/* weather line */
+.wttrinfo_line {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--shadow_colour);
+}
+/* weather box right */
 .wttrinfo_box_right {
     margin: 0 auto;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -99,3 +113,4 @@ font-variation-settings:
     margin-right: 5px;
     color: yellow;
 }
+

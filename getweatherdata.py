@@ -1,6 +1,6 @@
-import urllib.request
-import requests
 from dotenv import load_dotenv
+import requests
+import geocoder
 import json
 import os
 
@@ -10,13 +10,11 @@ class GetWeatherData:
         # get apikey
         load_dotenv()
         self.apiKey = os.environ.get("apikey")
-    
-    
+        
         # get location
-        with urllib.request.urlopen("https://geolocation-db.com/json") as url:
-            data = json.loads(url.read().decode())
-        self.city = data["city"]    
-    
+        g = geocoder.ip('me')
+        self.city = g.json["city"]
+        
         # language
         self.lang: str = lang
 
@@ -34,5 +32,5 @@ class GetWeatherData:
 
 
 if __name__ == "__main__":
-    gwd = GetWeatherData()
-    gwd.get_weather_info()
+    gwd = GetWeatherData("en")
+    print(gwd.get_weather_info())
